@@ -17,3 +17,4 @@ def generargrafo(n,m):
 if __name__ == '__main__':
     # Genera un grafo de 8 nodos y 6 aristas
     print(generargrafo(8,6))
+#dadsdadsaas
