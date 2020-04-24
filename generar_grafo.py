@@ -42,5 +42,5 @@ def generargrafov2(n, m):
 
 
 if __name__ == '__main__':
-    print(generargrafov2(3,"dds"))
-    randint("holas")
+    print(generargrafov2(5,20))
+
