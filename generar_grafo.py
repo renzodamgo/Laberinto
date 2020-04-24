@@ -4,6 +4,7 @@ from random import *
 # n vertices
 # m aristas
 
+
 def generargrafo(n, m):
     grafo = []
     for i in range(1, n + 1):
@@ -17,19 +18,29 @@ def generargrafo(n, m):
 
 
 def generargrafov2(n, m):
+    """
+    :param int n: número de vértices
+    :param int m: número de aristas
+    :return: Un grafo de n vértices y m aristas
+    """
+    if (n * n) - n < m:
+        return "Sobrepasa el máximo de aristas permitido"
     grafo = []
     edge_count = 0
     for i in range(n):
         arr = [i]
         grafo.append(arr)
-        for ari in range(randint(0,n)):
-            aleatorio = getrandbits(1)
-            if ari != i and aleatorio:
-                grafo[i].append(ari)
+    while edge_count < m:
+        for i in range(n):
+            for ari in range(n):
+                aleatorio = getrandbits(1)
+                if ari not in grafo[i] and aleatorio and edge_count < m:
+                    grafo[i].append(ari)
+                    edge_count = edge_count + 1
 
     return grafo
 
 
 if __name__ == '__main__':
-    # Genera un grafo de 8 nodos y 6 aristas
-    print(generargrafov2(8, 10))
+    print(generargrafov2(3,"dds"))
+    randint("holas")
