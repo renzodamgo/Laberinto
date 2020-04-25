@@ -42,5 +42,5 @@ def generargrafov2(n, m):
 
 
 if __name__ == '__main__':
-    print(generargrafov2(5,20))
+    print(generargrafov2(6,12))
 
